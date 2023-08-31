@@ -26,6 +26,11 @@ public class ImageConroller {
         return ResponseEntity.ok(images);
     }
 
+    @GetMapping("getmessage")
+    public String getAllMessage() {
+        return "Rahul";
+    }
+
     @PostMapping
     public ResponseEntity<Image> addImage(@RequestBody Image image) {
         Image addedImage = imageService.addImage(image);
